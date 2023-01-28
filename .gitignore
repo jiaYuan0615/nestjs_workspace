@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+node_modules/
+build/
+dist/
+tmp/
+temp/
+/log
+package-lock.json
+storage/
+
+.env.ecommerce
+.env.inventory

@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/inventory/src",
+  "projects": {
+    "inventory": {
+      "type": "application",
+      "root": "apps/inventory",
+      "entryFile": "main",
+      "sourceRoot": "apps/inventory/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/inventory/tsconfig.app.json"
+      }
+    },
+    "ecommerce": {
+      "type": "application",
+      "root": "apps/ecommerce",
+      "entryFile": "main",
+      "sourceRoot": "apps/ecommerce/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ecommerce/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/inventory/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/inventory"
+}

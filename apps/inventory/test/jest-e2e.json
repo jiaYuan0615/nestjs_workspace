@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "jyz/ldap-module/(.*)": "<rootDir>/../libs/ldap-module/src/$1",
+    "jyz/ldap-module": "<rootDir>/../libs/ldap-module/src",
+    "@app/ldap-library/(.*)": "<rootDir>/../libs/ldap-library/src/$1",
+    "@app/ldap-library": "<rootDir>/../libs/ldap-library/src",
+    "@app/auth-library/(.*)": "<rootDir>/../libs/auth-library/src/$1",
+    "@app/auth-library": "<rootDir>/../libs/auth-library/src",
+    "@app/upload-library/(.*)": "<rootDir>/../libs/upload-library/src/$1",
+    "@app/upload-library": "<rootDir>/../libs/upload-library/src"
+  }
+}
