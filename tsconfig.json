@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["es5", "es6"],
+    "lib": [
+      "es5",
+      "es6"
+    ],
     "skipLibCheck": true,
     "target": "es6",
     "module": "commonjs",
@@ -11,6 +14,13 @@
     "sourceMap": false,
     "esModuleInterop": true,
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "@app/upload": [
+        "libs/upload/src"
+      ],
+      "@app/upload/*": [
+        "libs/upload/src/*"
+      ]
+    }
   }
 }

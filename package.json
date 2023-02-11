@@ -11,6 +11,7 @@
     "build:ecommerce": "nest build --webpack --webpackPath ./apps/ecommerce/webpack-hmr.config.js --watch",
     "webpack:inventory": "webpack --config ./apps/inventory/webpack.config.js",
     "webpack:ecommerce": "webpack --config ./apps/ecommerce/webpack.config.js",
+    "build": "nest build && nest build inventory && nest build ecommerce",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nodemon --exec ts-node src/main.ts",
     "start:debug": "nest start --debug --watch",
@@ -126,6 +127,8 @@
       "<rootDir>/libs/",
       "<rootDir>/apps/"
     ],
-    "moduleNameMapper": {}
+    "moduleNameMapper": {
+      "^@app/upload(|/.*)$": "<rootDir>/libs/upload/src/$1"
+    }
   }
 }

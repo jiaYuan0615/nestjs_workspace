@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MulterModule } from '@nestjs/platform-express';
-import { UploadService } from '../common/upload.service';
+import { UploadService } from '@app/upload';
 import { ImageController } from './image.controller';
 import { ImageService } from './image.service';
 

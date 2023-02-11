@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { MulterOptionsFactory } from '@nestjs/platform-express';
 import { MulterOptions } from '@nestjs/platform-express/multer/interfaces/multer-options.interface';
+import { CustomBadRequestException } from 'apps/inventory/src/exceptions/custom-badrequest.exception';
 import { existsSync, mkdirSync } from 'fs';
 import { diskStorage } from 'multer';
-import { extname, resolve } from 'path';
+import { parse, resolve } from 'path';
 import { v4 as uuid } from 'uuid';
-import { CustomBadRequestException } from '../exceptions/custom-badrequest.exception';
 
 @Injectable()
 export class UploadService implements MulterOptionsFactory {
@@ -26,7 +26,7 @@ export class UploadService implements MulterOptionsFactory {
           callback(null, targetPath)
         },
         filename: (req, file, callback) => {
-          callback(null, `${uuid()}${extname(file.originalname).toLowerCase()}`)
+          callback(null, `${uuid()}${parse(file.originalname).ext}`)
         }
       })
     }
